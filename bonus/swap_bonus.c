@@ -6,7 +6,7 @@
 /*   By: brulutaj <brulutaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 21:11:40 by brulutaj          #+#    #+#             */
-/*   Updated: 2024/04/30 21:12:47 by brulutaj         ###   ########.fr       */
+/*   Updated: 2024/05/02 17:34:13 by brulutaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	checker_swap_op(t_dll **stack_a)
 	t_dll	*head;
 	int		tmp_value;
 
-	if (dll_size(*stack_a) == 1)
+	if (!*stack_a || dll_size(*stack_a) == 1)
 		return ;
 	head = *stack_a;
 	tmp_value = head->value;

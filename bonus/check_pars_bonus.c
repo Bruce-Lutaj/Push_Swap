@@ -6,7 +6,7 @@
 /*   By: brulutaj <brulutaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 20:47:55 by brulutaj          #+#    #+#             */
-/*   Updated: 2024/04/30 20:49:08 by brulutaj         ###   ########.fr       */
+/*   Updated: 2024/05/02 16:01:46 by brulutaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ t_dll	*checker_parse_input_string(int ac, char *av)
 	(void)ac;
 	head = (t_dll *){0};
 	mtx = ft_split(av, ' ');
-	if (!mtx || !mtx_check(mtx))
+	if (!mtx || !*mtx || !mtx_check(mtx))
 		return (free_mtx(mtx), ft_printf("Error\n"), NULL);
 	head = get_list_head(mtx);
 	if (!head)

@@ -6,7 +6,7 @@
 #    By: brulutaj <brulutaj@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/25 17:07:18 by brulutaj          #+#    #+#              #
-#    Updated: 2024/04/30 21:15:00 by brulutaj         ###   ########.fr        #
+#    Updated: 2024/05/02 17:29:51 by brulutaj         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,14 +33,23 @@ SRC =   main.c 		\
 		lis_sort.c	\
 		finalization.c
 
-SRC_BONUS = ./bonus/check_main_bonus.c	\
-			./bonus/check_pars_bonus.c	\
-			./bonus/parsing.c			\
-			./bonus/utils_1.c			\
-			./bonus/push.c				\
-			./bonus/r-rotate.c			\
-			./bonus/rotate.c			\
-			./bonus/swap.c				
+SRC_BONUS =		swap.c 						\
+				push.c 						\
+				rotate.c 					\
+				r-rotate.c 					\
+				utils_1.c 					\
+				utils_2.c 					\
+				parsing.c 					\
+				move_calc.c					\
+				mini_sort.c					\
+				lis_sort.c					\
+				finalization.c				\
+				./bonus/check_main_bonus.c	\
+				./bonus/check_pars_bonus.c	\
+				./bonus/push_bonus.c		\
+				./bonus/r-rotate_bonus.c	\
+				./bonus/rotate_bonus.c		\
+				./bonus/swap_bonus.c				
 
 all: $(NAME)
 
@@ -48,7 +57,7 @@ $(NAME): $(SRC)
 	@make all -s -C $(LIBFT_MAKE)
 	$(CC) $(FLAGS) -I. -I$(HEADERS) $(SRC) -L$(LIBFT_MAKE) -lft -o $(NAME)
 
-$(NAME_BONUS): $(SRC_BONUS)
+bonus: $(SRC_BONUS)
 	@make all -s -C $(LIBFT_MAKE)
 	$(CC) $(FLAGS) -I. -I$(HEADERS) $(SRC_BONUS) -L$(LIBFT_MAKE) -lft -o $(NAME_BONUS)
 
@@ -60,7 +69,6 @@ fclean: clean
 	@$(RM) $(NAME) $(NAME_BONUS)
 
 re: fclean all
-
 
 # .SILENT:
 .PHONY: all clean fclean re

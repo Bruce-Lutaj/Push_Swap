@@ -6,7 +6,7 @@
 /*   By: brulutaj <brulutaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 16:44:30 by brulutaj          #+#    #+#             */
-/*   Updated: 2024/04/30 18:17:52 by brulutaj         ###   ########.fr       */
+/*   Updated: 2024/04/30 21:29:09 by brulutaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,5 +91,20 @@ t_dll		*get_stack_lis(t_dll **stack_a);
 void		final_sorting(t_dll **stack_a);
 void		do_moves(t_dll **stack_a, t_dll **stack_b);
 void		solve_all(t_dll **stack_a, t_dll **stack_b);
+
+/* Bonus Functions */
+
+t_dll		*checker_get_list_head(char **mtx);
+t_dll		*checker_parse_input_string(int ac, char *av);
+t_dll		*checker_parse_input_args(int ac, char **av);
+t_dll		*checker_parse_input(int ac, char **av);
+void		checker_pa(t_dll **stack_a, t_dll **stack_b);
+void		checker_pb(t_dll **stack_b, t_dll **stack_a);
+void		checker_r_rotate_op(t_dll **stack);
+void		checker_r_rotate(t_dll **stack_a, t_dll **stack_b, int flag);
+void		checker_rotate_op(t_dll **stack);
+void		checker_rotate(t_dll **stack_a, t_dll **stack_b, int flag);
+void		checker_swap_op(t_dll **stack_a);
+void		checker_swap(t_dll **stack_a, t_dll **stack_b, int flag);
 
 #endif

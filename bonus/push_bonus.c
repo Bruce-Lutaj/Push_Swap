@@ -6,7 +6,7 @@
 /*   By: brulutaj <brulutaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 21:05:46 by brulutaj          #+#    #+#             */
-/*   Updated: 2024/04/30 21:06:34 by brulutaj         ###   ########.fr       */
+/*   Updated: 2024/05/02 17:42:39 by brulutaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	checker_pa(t_dll **stack_a, t_dll **stack_b)
 {
 	t_dll	*b_tmp;
 
+	if (!*stack_b)
+		return ;
 	if (dll_size(*stack_b) == 1)
 	{
 		dll_add_front(stack_a, *stack_b);
@@ -33,6 +35,8 @@ void	checker_pb(t_dll **stack_b, t_dll **stack_a)
 {
 	t_dll	*a_tmp;
 
+	if (!*stack_a)
+		return ;
 	if (dll_size(*stack_a) == 1)
 	{
 		dll_add_front(stack_b, *stack_a);

@@ -6,7 +6,7 @@
 /*   By: brulutaj <brulutaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 17:04:04 by brulutaj          #+#    #+#             */
-/*   Updated: 2024/04/30 16:15:13 by brulutaj         ###   ########.fr       */
+/*   Updated: 2024/05/02 17:38:23 by brulutaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	swap_op(t_dll **node1)
 	int		tmp_value;
 
 	if (dll_size(*node1) == 1)
-		return ;	
+		return ;
 	head = *node1;
 	tmp_value = head->value;
 	head->value = head->next->value;

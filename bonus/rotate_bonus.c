@@ -6,7 +6,7 @@
 /*   By: brulutaj <brulutaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 21:09:19 by brulutaj          #+#    #+#             */
-/*   Updated: 2024/04/30 21:11:18 by brulutaj         ###   ########.fr       */
+/*   Updated: 2024/05/02 17:42:56 by brulutaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	checker_rotate_op(t_dll **stack)
 	t_dll	*last;
 	t_dll	*second;
 
-	if (dll_size(*stack) == 1)
+	if (!*stack || dll_size(*stack) == 1)
 		return ;
 	head = *stack;
 	last = dll_last(head);

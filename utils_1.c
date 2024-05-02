@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
+/*   utils_1.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: brulutaj <brulutaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 15:45:54 by brulutaj          #+#    #+#             */
-/*   Updated: 2024/04/29 14:21:15 by brulutaj         ###   ########.fr       */
+/*   Updated: 2024/05/02 17:41:38 by brulutaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,26 +83,26 @@ t_bestmoves	bestmoves_cpy(t_bestmoves moves)
 
 	res = (t_bestmoves){0};
 	res.rot_a = moves.rot_a;
-    res.rot_b = moves.rot_b;
-    res.rot_both = moves.rot_both;
-    res.r_rot_a = moves.r_rot_a;
-    res.r_rot_b = moves.r_rot_b;
-    res.r_rot_both = moves.r_rot_both;
-    res.tot_moves = moves.tot_moves;
+	res.rot_b = moves.rot_b;
+	res.rot_both = moves.rot_both;
+	res.r_rot_a = moves.r_rot_a;
+	res.r_rot_b = moves.r_rot_b;
+	res.r_rot_both = moves.r_rot_both;
+	res.tot_moves = moves.tot_moves;
 	return (res);
 }
 
 t_bestmoves	bestmoves_operations(t_bestmoves moves, int flag_move)
 {
 	if (flag_move == ROTATE)
-	{	
+	{
 		moves.rot_a -= moves.rot_both;
-        moves.rot_b -= moves.rot_both;
+		moves.rot_b -= moves.rot_both;
 	}
 	if (flag_move == R_ROTATE)
-	{	
+	{
 		moves.r_rot_a -= moves.r_rot_both;
-        moves.r_rot_b -= moves.r_rot_both;
+		moves.r_rot_b -= moves.r_rot_both;
 	}
 	if (flag_move == STAY)
 		moves.tot_moves = moves.rot_a + moves.rot_b + moves.rot_both \
